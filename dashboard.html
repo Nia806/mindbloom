@@ -16,6 +16,8 @@
         .header {
             display: flex;
             align-items: center;
+            position: fixed;
+            background-color: white;
         }
 
         .TAB-1,
@@ -45,6 +47,9 @@
 
         .image-container img:hover {
             transform: scale(1.1);
+        }
+        .comment{
+            background-color: #F5F5DC;
         }
     </style>
 </head>
@@ -84,18 +89,19 @@
     </div>
 
     <br><br>
-    <div>
+    <div style="margin-top:150px">
         <img src="images/img1.png" width="100%" height="auto">
     </div>
 
     <br><br>
-    <div style="display:flex; align-items: center; margin-left:50px";>
+    <div style="display:flex; align-items: center; margin-left:50px;">
         <iframe width="560" height="315" src="https://youtu.be/fUJq-l2lq6Q?si=bJ2LxSn4MjiHUDxM"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
         </iframe>
-        <p style="text-align: right; margin-right:50px; font-size:20px; padding:50px"> Mind Bloom is a forward-thinking organization dedicated to
+        <p style="text-align: right; margin-right:50px; font-size:20px; padding:50px;"> Mind Bloom is a forward-thinking
+            organization dedicated to
             promoting Sustainable Development Goal (SDG) education for all. Through an innovative and accessible online
             platform, Mind Bloom offers children from all walks of life the opportunity to explore, learn, and engage
             with the vital global goals that shape our future. With a focus on creativity, inclusivity, and
@@ -120,8 +126,48 @@
         </div>
     </div>
 
-    <div class="comment">
+    <p style="margin-left:50px; margin-right:50px; font-size:20px">
+        Mind Bloom is more than just an educational platform—it's a movement aimed at planting the seeds of change and
+        nurturing them to full bloom. By harnessing the power of digital learning, we provide children with the
+        resources and opportunities to engage with the United Nations’ Sustainable Development Goals (SDGs), empowering
+        them to understand and actively contribute to global sustainability efforts. Our platform is designed to inspire
+        creativity, critical thinking, and problem-solving skills, all while fostering a sense of responsibility and
+        social awareness.
 
+        Mind Bloom’s unique approach combines interactive lessons, hands-on projects, and thought-provoking discussions,
+        encouraging young learners to think globally while acting locally. We believe in the potential of every child to
+        make a difference, and by making SDG education accessible and engaging, we help cultivate the next generation of
+        global citizens who are equipped to tackle the challenges of tomorrow. As children embark on this educational
+        journey, they don’t just learn about the world—they become motivated to change it for the better. Through Mind
+        Bloom, education truly becomes a catalyst for growth, both personal and societal.
+    </p>
+
+    <div class="comment">
+        <form action="" method="post">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Any message you want to drop for us:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+            <button type="submit">Send Message</button>
+        </form>
     </div>
+    <p style="font-size:20px; background-color: #333333;">
+        Mind Bloom is more than just an educational platform—it's a movement aimed at planting the seeds of change and
+        nurturing them to full bloom. By harnessing the power of digital learning, we provide children with the
+        resources and opportunities to engage with the United Nations’ Sustainable Development Goals (SDGs), empowering
+        them to understand and actively contribute to global sustainability efforts. Our platform is designed to inspire
+        creativity, critical thinking, and problem-solving skills, all while fostering a sense of responsibility and
+        social awareness.
+
+        Mind Bloom’s unique approach combines interactive lessons, hands-on projects, and thought-provoking discussions,
+        encouraging young learners to think globally while acting locally. We believe in the potential of every child to
+        make a difference, and by making SDG education accessible and engaging, we help cultivate the next generation of
+        global citizens who are equipped to tackle the challenges of tomorrow. As children embark on this educational
+        journey, they don’t just learn about the world—they become motivated to change it for the better. Through Mind
+        Bloom, education truly becomes a catalyst for growth, both personal and societal.
+    </p>
 </body>
+
 </html>
