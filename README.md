@@ -1,1 +1,1 @@
-<p style="align:center"><b> WEBSITE FOR <!-WEBSITE NAME-> </b></p>
+<p align="center"><b> WEBSITE FOR <!-WEBSITE NAME-> </b></p>
