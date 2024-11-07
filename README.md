@@ -1,12 +1,12 @@
-<p align="center"><h2> WEBSITE FOR <!-WEBSITE NAME-> </h2></p>
-<h3>ABOUT THE PROJECT </h3>
+<h3 align="center"> WEBSITE FOR <!--WEBSITE NAME--> </h3>
+<h4>ABOUT THE PROJECT </h4>
 <p> </p>
-<h3>TECHNOLOGY USED </h3>
+<h4>TECHNOLOGY USED </h4>
 <p> </p>
-<h3>FEATURES </h3>
+<h4>FEATURES </h4>
 <p> </p>
-<h3>ACKNOWLEDGMENT </h3>
+<h4>ACKNOWLEDGMENT </h4>
 <p> </p>
-<h3>CONTRIBUTING </h3>
-<p>Nihalika Raj Sharma (09201032024) </p>
-<p>Navya Jaint(09X01032024) </p>
+<h4>CONTRIBUTING </h4>
+<p>Nihalika Raj Sharma (09201032024)<hr>
+Navya Jaint(09X01032024) </p>
