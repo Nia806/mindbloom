@@ -9,4 +9,4 @@
 <p> </p> <hr>
 <h4>CONTRIBUTING </h4>
 <p>Nihalika Raj Sharma (09201032024)<br>
-Navya Jaint(09X01032024) </p> <hr>
+Navya Jaint (09X01032024) </p> <hr>
