@@ -1,61 +1,115 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            <!--WEBSITE NAME-->
-        </title>
-        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-        <style>
-            .header{
-                text-align: right;
-                margin-right: 10%;
-                margin-top: 50px;
-            }
-            .TAB-1, .TAB-2, .TAB-3, .TAB-4{
-                border: none; 
-                font-family: 'Lilita One', sans-serif;
-                color: #2a2828;
-                font-size: 20px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="header"> <!--HEADER : STAYS ALWAYS -->
-            <select class = "TAB-1">
-                <option > OUR WORK </option>
-                <option> Scholarship </option>
-                <option> Mentorship </option>
-                <option> Awareness Sessions </option>
-                <option> Impact and Reach </option>
-                <option> Newsletters </option> </select>
-            <select class = "TAB-2">
-                <option> ABOUT US </option>
-                <option> About </option>
-                <option> Leadership and Board </option>
-                <option> Programs </option>
-                <option> Network </option> </select>
-            <select class = "TAB-3">
-                <option> TAKE ACTION </option>
-                <option> Donate </option>
-                <option> Volunteer  </option>
-                <option> Apply for Scholarship </option>
-                <option> Apply for Mentorship </option> </select>
-            <select class = "TAB-4">
-                <option> LOGIN </option>
-                <option> Login as Student </option>
-                <option> Login as Mentor </option>
-                <option> Login as Member </option> </select>
-            <img src ="images/notifbell.png" height ="2%" width="1.5%">
-        </div>
-        <br><br>
-        <div>
-            <img src="images/img1.png" width="100%" height="auto">
-        </div>
-        <br><br>
-        <div>
-            <iframe width="560" height="315" src="https://youtu.be/fUJq-l2lq6Q?si=bJ2LxSn4MjiHUDxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-            </iframe>
+<head>
+    <title>
+        <!-- WEBSITE NAME -->
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <style>
+        .header {
+            text-align: right;
+            margin-right: 10%;
+            margin-top: 50px;
+        }
 
+        .TAB-1,
+        .TAB-2,
+        .TAB-3,
+        .TAB-4 {
+            border: none;
+            font-family: 'Lilita One', sans-serif;
+            color: #2a2828;
+            font-size: 20px;
+        }
+
+        .image-container {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <select class="TAB-1">
+            <option> OUR WORK </option>
+            <option> Scholarship </option>
+            <option> Mentorship </option>
+            <option> Awareness Sessions </option>
+            <option> Impact and Reach </option>
+            <option> Newsletters </option>
+        </select>
+        <select class="TAB-2">
+            <option> ABOUT US </option>
+            <option> About </option>
+            <option> Leadership and Board </option>
+            <option> Programs </option>
+            <option> Network </option>
+        </select>
+        <select class="TAB-3">
+            <option> TAKE ACTION </option>
+            <option> Donate </option>
+            <option> Volunteer </option>
+            <option> Apply for Scholarship </option>
+            <option> Apply for Mentorship </option>
+        </select>
+        <select class="TAB-4">
+            <option> LOGIN </option>
+            <option> Login as Student </option>
+            <option> Login as Mentor </option>
+            <option> Login as Member </option>
+        </select>
+        <img src="images/notifbell.png" height="2%" width="1.5%">
+    </div>
+
+    <br><br>
+    <div>
+        <img src="images/img1.png" width="100%" height="auto">
+    </div>
+
+    <br><br>
+    <div>
+        <iframe width="560" height="315" src="https://youtu.be/fUJq-l2lq6Q?si=bJ2LxSn4MjiHUDxM"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <br><br>
+    <div style="text-align:center">
+        <div class="image-container">
+            <img src="images/purpose.jpg" alt="Purpose Image">
         </div>
-    </body>
+        <div class="image-container">
+            <img src="images/network.jpg" alt="Network Image">
+        </div>
+        <div class="image-container">
+            <img src="images/mentors.jpg" alt="Mentors Image">
+        </div>
+        <div class="image-container">
+            <img src="images/learning.jpg" alt="Learning Image">
+        </div>
+    </div>
+
+    <div class="comment">
+
+    </div>
+</body>
+
 </html>
