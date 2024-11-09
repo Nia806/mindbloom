@@ -18,6 +18,7 @@
             align-items: center;
             position: fixed;
             background-color: white;
+            z-index: 10;
         }
 
         .TAB-1,
@@ -49,8 +50,55 @@
             transform: scale(1.1);
         }
         .comment{
-            background-color: #F5F5DC;
+            background-color: #a0a6be;
         }
+        .comment input{
+            margin-left:10px;
+        }
+        .comment textarea{
+            margin-left:10px;
+        }
+        .comment label{
+            margin-left:10px;
+            margin-top:10px;
+        }
+        .comment button{
+            margin-left:10px;
+            margin-bottom:10px;
+        }
+        table {
+            float:right;
+            text-align: center;
+            border-collapse: collapse;
+            white-space: nowrap;
+            table-layout: auto;
+            width: auto;
+            margin-right: "30px";
+        }
+        td, th {
+            padding: 8px;
+        }
+        .footer {
+            width: 100%;
+            height: 20vh;
+            background-color: #333333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            color: purple;
+        }
+        .footer a:active {
+            color: green;
+        }
+        
+
     </style>
 </head>
 
@@ -89,85 +137,102 @@
     </div>
 
     <br><br>
-    <div style="margin-top:150px">
-        <img src="images/img1.png" width="100%" height="auto">
+    <div class="main-content">
+        <section style="margin-top:150px">
+            <img src="images/img1.png" width="100%" height="auto">
+        </section>
+    
+        <br><br>
+        <section style="display:flex; align-items: center; margin-left:50px;">
+            <iframe width="560" height="315" src="https://youtu.be/fUJq-l2lq6Q?si=bJ2LxSn4MjiHUDxM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p style="text-align: right; margin-right:50px; font-size:20px; padding:50px;"> Mind Bloom is a forward-thinking
+                organization dedicated to
+                promoting Sustainable Development Goal (SDG) education for all. Through an innovative and accessible online
+                platform, Mind Bloom offers children from all walks of life the opportunity to explore, learn, and engage
+                with the vital global goals that shape our future. With a focus on creativity, inclusivity, and
+                sustainability, the platform fosters curiosity and empowers young minds to become active contributors to a
+                better world. At Mind Bloom, education becomes a transformative journey, where children grow, bloom, and
+                inspire change. </p>
+        </section>
+    
+        <br><br>
+        <section style="text-align:center">
+            <div class="image-container">
+                <img src="images/purpose.jpg" alt="Purpose Image">
+            </div>
+            <div class="image-container">
+                <img src="images/network.jpg" alt="Network Image">
+            </div>
+            <div class="image-container">
+                <img src="images/mentors.jpg" alt="Mentors Image">
+            </div>
+            <div class="image-container">
+                <img src="images/learning.jpg" alt="Learning Image">
+            </div>
+        </section>
+    
+        <p style="margin-left:50px; margin-right:50px; font-size:20px">
+            Mind Bloom is more than just an educational platform—it's a movement aimed at planting the seeds of change and
+            nurturing them to full bloom. By harnessing the power of digital learning, we provide children with the
+            resources and opportunities to engage with the United Nations’ Sustainable Development Goals (SDGs), empowering
+            them to understand and actively contribute to global sustainability efforts. Our platform is designed to inspire
+            creativity, critical thinking, and problem-solving skills, all while fostering a sense of responsibility and
+            social awareness.
+    
+            Mind Bloom’s unique approach combines interactive lessons, hands-on projects, and thought-provoking discussions,
+            encouraging young learners to think globally while acting locally. We believe in the potential of every child to
+            make a difference, and by making SDG education accessible and engaging, we help cultivate the next generation of
+            global citizens who are equipped to tackle the challenges of tomorrow. As children embark on this educational
+            journey, they don’t just learn about the world—they become motivated to change it for the better. Through Mind
+            Bloom, education truly becomes a catalyst for growth, both personal and societal.
+        </p>
+    
+        <section class="comment">
+            <form action="" method="post">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+    
+                <label for="message">Any message you want to drop for us:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+    <br>
+    <div class="footer">
+        <table style="margin-left:40px">
+            <tr>
+                <td><a href=" " class="foot-link"> ABOUT US</a></td>
+                <td><a href=" " class="foot-link"> PROGRAMS </a></td>
+                <td><a href=" " class="foot-link"> PORTAL </a></td>
+            </tr>
+            <tr>
+                <td><a href=" " class="foot-link"> NETWORK </a></td>
+                <td><a href=" " class="foot-link"> SPONSORS </a></td>
+                <td><a href=" " class="foot-link"> CONTACT US </a></td>
+            </tr>
+            <tr>
+                <td><a href=" " class="foot-link"> LOGIN AS STUDENT </a></td>
+                <td><a href=" " class="foot-link"> LOGIN AS MENTOR </a></td>
+                <td><a href=" " class="foot-link"> LOGIN AS VOLUNTEER</a></td>
+            </tr>
+            <tr>
+                <td><a href=" " class="foot-link"> DONATE </a></td>
+                <td><a href=" " class="foot-link"> SPONSORSHIP </a></td>
+                <td><a href=" " class="foot-link"> MENTORSHIP </a></td>
+            </tr>
+            <tr>
+                <td><a href=" " class="foot-link"> TEAM </a></td>
+                <td><a href=" " class="foot-link"> BRANCHES </a></td>
+                <td><a href=" " class="foot-link"> FOLLOWERS </a></td>
+            </tr>
+        </table>
     </div>
 
-    <br><br>
-    <div style="display:flex; align-items: center; margin-left:50px;">
-        <iframe width="560" height="315" src="https://youtu.be/fUJq-l2lq6Q?si=bJ2LxSn4MjiHUDxM"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-        <p style="text-align: right; margin-right:50px; font-size:20px; padding:50px;"> Mind Bloom is a forward-thinking
-            organization dedicated to
-            promoting Sustainable Development Goal (SDG) education for all. Through an innovative and accessible online
-            platform, Mind Bloom offers children from all walks of life the opportunity to explore, learn, and engage
-            with the vital global goals that shape our future. With a focus on creativity, inclusivity, and
-            sustainability, the platform fosters curiosity and empowers young minds to become active contributors to a
-            better world. At Mind Bloom, education becomes a transformative journey, where children grow, bloom, and
-            inspire change. </p>
-    </div>
-
-    <br><br>
-    <div style="text-align:center">
-        <div class="image-container">
-            <img src="images/purpose.jpg" alt="Purpose Image">
-        </div>
-        <div class="image-container">
-            <img src="images/network.jpg" alt="Network Image">
-        </div>
-        <div class="image-container">
-            <img src="images/mentors.jpg" alt="Mentors Image">
-        </div>
-        <div class="image-container">
-            <img src="images/learning.jpg" alt="Learning Image">
-        </div>
-    </div>
-
-    <p style="margin-left:50px; margin-right:50px; font-size:20px">
-        Mind Bloom is more than just an educational platform—it's a movement aimed at planting the seeds of change and
-        nurturing them to full bloom. By harnessing the power of digital learning, we provide children with the
-        resources and opportunities to engage with the United Nations’ Sustainable Development Goals (SDGs), empowering
-        them to understand and actively contribute to global sustainability efforts. Our platform is designed to inspire
-        creativity, critical thinking, and problem-solving skills, all while fostering a sense of responsibility and
-        social awareness.
-
-        Mind Bloom’s unique approach combines interactive lessons, hands-on projects, and thought-provoking discussions,
-        encouraging young learners to think globally while acting locally. We believe in the potential of every child to
-        make a difference, and by making SDG education accessible and engaging, we help cultivate the next generation of
-        global citizens who are equipped to tackle the challenges of tomorrow. As children embark on this educational
-        journey, they don’t just learn about the world—they become motivated to change it for the better. Through Mind
-        Bloom, education truly becomes a catalyst for growth, both personal and societal.
-    </p>
-
-    <div class="comment">
-        <form action="" method="post">
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="message">Any message you want to drop for us:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
-    <p style="font-size:20px; background-color: #333333;">
-        Mind Bloom is more than just an educational platform—it's a movement aimed at planting the seeds of change and
-        nurturing them to full bloom. By harnessing the power of digital learning, we provide children with the
-        resources and opportunities to engage with the United Nations’ Sustainable Development Goals (SDGs), empowering
-        them to understand and actively contribute to global sustainability efforts. Our platform is designed to inspire
-        creativity, critical thinking, and problem-solving skills, all while fostering a sense of responsibility and
-        social awareness.
-
-        Mind Bloom’s unique approach combines interactive lessons, hands-on projects, and thought-provoking discussions,
-        encouraging young learners to think globally while acting locally. We believe in the potential of every child to
-        make a difference, and by making SDG education accessible and engaging, we help cultivate the next generation of
-        global citizens who are equipped to tackle the challenges of tomorrow. As children embark on this educational
-        journey, they don’t just learn about the world—they become motivated to change it for the better. Through Mind
-        Bloom, education truly becomes a catalyst for growth, both personal and societal.
-    </p>
 </body>
-
 </html>
