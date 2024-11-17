@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>
+            Mind Bloom
+        </title>
+        <!--<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">-->
+        <link rel="icon" href="images/Logo.png" type="image/x-icon">
+    
+        <style>
+            select.header {
+                text-align: right;
+                margin-right: 10%;
+                margin-top: 50px;
+            }
+    
+            .header {
+                display: flex;
+                align-items: center;
+                position: fixed;
+                background-color: white;
+                z-index: 10;
+            }
+    
+            .TAB-1,
+            .TAB-2,
+            .TAB-3,
+            .TAB-4 {
+                border: none;
+                font-family: 'Times New Roman', Times, serif;
+                color: #2a2828;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+            function redirectToPage(selectElement) {
+                const selectedValue = selectElement.value;
+                 if (selectedValue) {
+                    window.location.href = selectedValue;
+                 }
+                 }
+         </script>
+    </head>
+    <body>
+        <div class="header">
+            <img style="margin-left: 20px;" src="images/thumbnail.png" alt="mindbloom" height="10%" width="10%">
+                <select class="TAB-1" onchange="redirectToPage(this)">
+            <option value="">OUR WORK</option>
+            <option value="work.html">Our Work</option>
+            <option value="scholarship.html">Scholarship</option>
+            <option value="mentorship.html">Mentorship</option>
+            <option value="session.html">Awareness Sessions</option>
+            <option value="impact.html">Impact and Reach</option>
+            <option value="newsletter.html">Newsletters</option>
+        </select>
+    
+        <select class="TAB-2" onchange="redirectToPage(this)">
+            <option value="">ABOUT US</option>
+            <option value="dashboard.html">About</option>
+            <option value="work.html">Programs</option>
+            <option value="impact.html">Network</option>
+        </select>
+    
+        <select class="TAB-3" onchange="redirectToPage(this)">
+            <option value="">TAKE ACTION</option>
+            <option value="donate.html">Donate</option>
+            <option value="volunteer.html">Volunteer</option>
+            <option value="scholarship.html">Apply for Scholarship</option>
+            <option value="mentorship.html">Apply for Mentorship</option>
+        </select>
+    
+        <select class="TAB-4" onchange="redirectToPage(this)">
+            <option value="">LOGIN</option>
+            <option value="student-login.html">Login as Student</option>
+            <option value="mentor-login.html">Login as Mentor</option>
+            <option value="member-login.html">Login as Member</option>
+        </select>
+            <img src="images/notifbell.png" height="2%" width="1.5%">
+        </div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    SCHOLARSHIP
+    </body>
+</html>

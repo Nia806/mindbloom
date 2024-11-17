@@ -2,12 +2,8 @@
 <html>
 
 <head>
-    <title>
-        Mind Bloom
-    </title>
-    <!--<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">-->
+    <title>Mind Bloom</title>
     <link rel="icon" href="images/Logo.png" type="image/x-icon">
-
     <style>
         select.header {
             text-align: right;
@@ -19,9 +15,14 @@
             display: flex;
             align-items: center;
             position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             background-color: white;
             z-index: 10;
-        }
+            margin: 0;
+            padding: 0;
+}
 
         .TAB-1,
         .TAB-2,
@@ -51,35 +52,32 @@
         .image-container img:hover {
             transform: scale(1.1);
         }
-        .comment{
+
+        .comment {
             background-color: #C481A7;
         }
-        .comment input{
-            margin-left:10px;
+
+        .comment input,
+        .comment textarea,
+        .comment label,
+        .comment button {
+            margin: 10px;
         }
-        .comment textarea{
-            margin-left:10px;
-        }
-        .comment label{
-            margin-left:10px;
-            margin-top:10px;
-        }
-        .comment button{
-            margin-left:10px;
-            margin-bottom:10px;
-        }
+
         table {
-            float:right;
+            float: right;
             text-align: center;
             border-collapse: collapse;
             white-space: nowrap;
             table-layout: auto;
             width: auto;
-            margin-right: "30px";
         }
-        td, th {
+
+        td,
+        th {
             padding: 8px;
         }
+
         .footer {
             width: 100%;
             height: 24vh;
@@ -88,71 +86,77 @@
             padding: 20px 0;
             text-align: center;
         }
+
         .footer a {
             color: white;
             text-decoration: none;
             margin: 0 10px;
         }
+
         .footer a:hover {
             color: purple;
         }
+
         .footer a:active {
             color: green;
         }
-        
-
     </style>
+    <script>
+        function redirectToPage(selectElement) {
+            const selectedValue = selectElement.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        }
+    </script>
 </head>
 
 <body>
     <div class="header">
         <img style="margin-left: 20px;" src="images/thumbnail.png" alt="mindbloom" height="10%" width="10%">
-        <select class="TAB-1">
-            <option> OUR WORK </option>
-            <option> Scholarship </option>
-            <option> Mentorship </option>
-            <option> Awareness Sessions </option>
-            <option> Impact and Reach </option>
-            <option> Newsletters </option>
+        <select class="TAB-1" onchange="redirectToPage(this)">
+            <option value="">OUR WORK</option>
+            <option value="work.html">Our Work</option>
+            <option value="scholarship.html">Scholarship</option>
+            <option value="mentorship.html">Mentorship</option>
+            <option value="session.html">Awareness Sessions</option>
+            <option value="impact.html">Impact and Reach</option>
+            <option value="newsletter.html">Newsletters</option>
         </select>
-        <select class="TAB-2">
-            <option> ABOUT US </option>
-            <option> About </option>
-            <option> Leadership and Board </option>
-            <option> Programs </option>
-            <option> Network </option>
+        <select class="TAB-2" onchange="redirectToPage(this)">
+            <option value="">ABOUT US</option>
+            <option value="dashboard.html">About</option>
+            <option value="">Leadership and Board</option>
+            <option value="work.html">Programs</option>
+            <option value="impact.html">Network</option>
         </select>
-        <select class="TAB-3">
-            <option> TAKE ACTION </option>
-            <option> Donate </option>
-            <option> Volunteer </option>
-            <option> Apply for Scholarship </option>
-            <option> Apply for Mentorship </option>
+        <select class="TAB-3" onchange="redirectToPage(this)">
+            <option value="">TAKE ACTION</option>
+            <option value="donate.html">Donate</option>
+            <option value="volunteer.html">Volunteer</option>
+            <option value="scholarship.html">Apply for Scholarship</option>
+            <option value="mentorship.html">Apply for Mentorship</option>
         </select>
-        <select class="TAB-4">
-            <option> LOGIN </option>
-            <option> Login as Student </option>
-            <option> Login as Mentor </option>
-            <option> Login as Member </option>
+        <select class="TAB-4" onchange="redirectToPage(this)">
+            <option value="">LOGIN</option>
+            <option value="student-login.html">Login as Student</option>
+            <option value="mentor-login.html">Login as Mentor</option>
+            <option value="member-login.html">Login as Member</option>
         </select>
         <img src="images/notifbell.png" height="2%" width="1.5%">
     </div>
-
-    <br><br>
     <div class="main-content">
         <section style="margin-top:120px">
             <img src="images/img1.png" width="100%" height="auto">
         </section>
-        
         <br><br>
-        
+        <section class="gallery"></section>
+        <br><br>
         <section style="display: flex; justify-content: space-between; margin-left:30px; margin-right:3px;">
-
             <iframe width="100%" height="500" src="https://www.youtube.com/embed/fUJq-l2lq6Q?si=bJ2LxSn4MjiHUDxM" 
             title="YouTube video player" style="border: 10px solid #A0A6BE;"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             </iframe>
-            
             <p style="width: 50%; text-align: justify; font-size:20px; padding:50px;">
                 Mind Bloom is a forward-thinking organization dedicated to promoting Sustainable Development Goal (SDG) education for all. 
                 Through an innovative and accessible online platform, Mind Bloom offers children from all walks of life the opportunity to 
@@ -161,8 +165,6 @@
                 At Mind Bloom, education becomes a transformative journey, where children grow, bloom, and inspire change.
             </p>
         </section>
-        
-    
         <br><br>
         <section style="text-align:center">
             <div class="image-container">
@@ -173,13 +175,11 @@
             </div>
             <div class="image-container">
                 <img src="images/learning.jpg" alt="Learning Image">
-                
             </div>
             <div class="image-container">
                 <img src="images/mentors.jpg" alt="Mentors Image">
             </div>
         </section>
-    
         <p style="margin-left:50px; margin-right:50px; font-size:20px">
             Mind Bloom is more than just an educational platform—it's a movement aimed at planting the seeds of change and
             nurturing them to full bloom. By harnessing the power of digital learning, we provide children with the
@@ -187,28 +187,17 @@
             them to understand and actively contribute to global sustainability efforts. Our platform is designed to inspire
             creativity, critical thinking, and problem-solving skills, all while fostering a sense of responsibility and
             social awareness.
-    
-            Mind Bloom’s unique approach combines interactive lessons, hands-on projects, and thought-provoking discussions,
-            encouraging young learners to think globally while acting locally. We believe in the potential of every child to
-            make a difference, and by making SDG education accessible and engaging, we help cultivate the next generation of
-            global citizens who are equipped to tackle the challenges of tomorrow. As children embark on this educational
-            journey, they don’t just learn about the world—they become motivated to change it for the better. Through Mind
-            Bloom, education truly becomes a catalyst for growth, both personal and societal.
         </p>
-    
         <section class="comment">
             <form action="" method="post">
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email" required><br><br>
-    
                 <label for="message">Any message you want to drop for us:</label><br>
                 <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-    
                 <button type="submit">Send Message</button>
             </form>
         </section>
     </div>
-    <br>
     <div class="footer">
         <table style="margin-left:40px">
             <tr>
@@ -238,9 +227,6 @@
             </tr>
         </table>
     </div>
-    <div class="gallery">
-
-    </div>
-
 </body>
+
 </html>
