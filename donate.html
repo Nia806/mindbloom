@@ -30,6 +30,55 @@
                 color: #2a2828;
                 font-size: 20px;
             }
+            
+            .comment{
+                background-color: #C481A7;
+            }
+    
+            .comment input,
+            .comment textarea,
+            .comment label,
+            .comment button {
+                margin: 10px;
+            }
+    
+            table {
+                float: right;
+                text-align: center;
+                border-collapse: collapse;
+                white-space: nowrap;
+                table-layout: auto;
+                width: auto;
+            }
+    
+            td,
+            th {
+                padding: 8px;
+            }
+    
+            .footer {
+                width: 100%;
+                height: 24vh;
+                background-color: #333333;
+                color: white;
+                padding: 20px 0;
+                text-align: center;
+            }
+    
+            .footer a {
+                color: white;
+                text-decoration: none;
+                margin: 0 10px;
+            }
+    
+            .footer a:hover {
+                color: purple;
+            }
+    
+            .footer a:active {
+                color: green;
+            }
+        
         </style>
 
         <script>
@@ -79,7 +128,50 @@
             <img src="images/notifbell.png" height="2%" width="1.5%">
         </div>
     
+        <div>
+            <section>
+        
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         DONATE
+            </section>
+            <section class="comment">
+                <form action="" method="post">
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="message">Any message you want to drop for us:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </div>
+        <div class="footer">
+            <table style="margin-left:40px">
+                <tr>
+                    <td><a href=" " class="foot-link"> ABOUT US</a></td>
+                    <td><a href=" " class="foot-link"> PROGRAMS </a></td>
+                    <td><a href=" " class="foot-link"> PORTAL </a></td>
+                </tr>
+                <tr>
+                    <td><a href=" " class="foot-link"> NETWORK </a></td>
+                    <td><a href=" " class="foot-link"> SPONSORS </a></td>
+                    <td><a href=" " class="foot-link"> CONTACT US </a></td>
+                </tr>
+                <tr>
+                    <td><a href=" " class="foot-link"> LOGIN AS STUDENT </a></td>
+                    <td><a href=" " class="foot-link"> LOGIN AS MENTOR </a></td>
+                    <td><a href=" " class="foot-link"> LOGIN AS VOLUNTEER</a></td>
+                </tr>
+                <tr>
+                    <td><a href=" " class="foot-link"> DONATE </a></td>
+                    <td><a href=" " class="foot-link"> SPONSORSHIP </a></td>
+                    <td><a href=" " class="foot-link"> MENTORSHIP </a></td>
+                </tr>
+                <tr>
+                    <td><a href=" " class="foot-link"> TEAM </a></td>
+                    <td><a href=" " class="foot-link"> BRANCHES </a></td>
+                    <td><a href=" " class="foot-link"> FOLLOWERS </a></td>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
