@@ -27,9 +27,51 @@ def products():
 
 
 
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
+
+
+
 @app.route('/work')
 def work():
     return render_template('work.html')
+
+
+
+@app.route('/scholarship')
+def scholarship():
+    return render_template('scholarship.html')
+
+
+
+@app.route('/mentorship')
+def mentorship():
+    return render_template('mentorship.html')
+
+
+
+@app.route('/session')
+def session():
+    return render_template('session.html')
+
+
+
+@app.route('/impact')
+def impact():
+    return render_template('impact.html')
+
+
+
+@app.route('/newsletter')
+def newsletter():
+    return render_template('newsletter.html')
+
+
+
+@app.route('/volunteer')
+def volunteer():
+    return render_template('volunteer.html')
 
 
 

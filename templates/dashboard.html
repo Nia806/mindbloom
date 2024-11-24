@@ -4,7 +4,7 @@
 <head>
 
     <title>Mind Bloom</title>
-    <link rel="icon" href="images/Logo.png" type="image/x-icon">
+    <link rel="icon" href="../static/images/Logo.png" type="image/x-icon">
 
     <style>
         select.header {
@@ -143,31 +143,30 @@
 <body>
 
     <div class="header">
-        <img style="margin-left: 20px;" src="static\images\thumbnail.png" alt="mindbloom" height="10%" width="10%">
+        <img style="margin-left: 20px;" src="..\static\images\thumbnail.png" alt="mindbloom" height="10%" width="10%">
 
         <select class="TAB-1" onchange="redirectToPage(this)">
             <option value="" >OUR WORK</option>
-            <option value="templates/work.html">Our Work</option>
-            <option value="templates/scholarship.html">Scholarship</option>
-            <option value="templates/mentorship.html">Mentorship</option>
-            <option value="templates/session.html">Awareness Sessions</option>
-            <option value="templates/impact.html">Impact and Reach</option>
-            <option value="templates/newsletter.html">Newsletters</option>
+            <option value="http://127.0.0.1:5002/work">Our Work</option>
+            <option value="http://127.0.0.1:5002/scholarship">Scholarship</option>
+            <option value="http://127.0.0.1:5002/mentorship">Mentorship</option>
+            <option value="http://127.0.0.1:5002/session">Awareness Sessions</option>
+            <option value="http://127.0.0.1:5002/impact">Impact and Reach</option>
+            <option value="http://127.0.0.1:5002/newsletter">Newsletters</option>
         </select>
 
         <select class="TAB-2" onchange="redirectToPage(this)">
             <option value="">ABOUT US</option>
-            <option value="dashboard.html">About</option>
-            <option value="http://127.0.0.1:5002">Programs</option>
-            <option value="templates/impact.html">Network</option>
+            <option value="http://127.0.0.1:5002/dashboard">About</option>
+            <option value="http://127.0.0.1:5002/impact">Network</option>
         </select>
 
         <select class="TAB-3" onchange="redirectToPage(this)">
             <option value="">TAKE ACTION</option>
-            <option value="templates/donate.html">Donate</option>
-            <option value="volunteer.html">Volunteer</option>
-            <option value="scholarship.html">Apply for Scholarship</option>
-            <option value="mentorship.html">Apply for Mentorship</option>
+            <option value="http://127.0.0.1:5002">Contribute</option>
+            <option value="http://127.0.0.1:5002/volunteer">Volunteer</option>
+            <option value="http://127.0.0.1:5002/scholarship">Apply for Scholarship</option>
+            <option value="http://127.0.0.1:5002/mentorship">Apply for Mentorship</option>
         </select>
 
         <select class="TAB-4" onchange="redirectToPage(this)">
@@ -177,20 +176,20 @@
             <option value="templates/member-login.html">Login as Member</option>
         </select>
 
-        <img src="static\images\notifbell.png" height="2%" width="1.5%">
+        <img src="..\static\images\notifbell.png" height="2%" width="1.5%">
 
     </div>
 
     <div class="scroll">
 
         <button class="image-button" title="GOT TO THE TOP" onclick="scrollToSection('top')">
-            <img src="static\images\top.png" alt="" height="50px" width="50px">
+            <img src="..\static\images\top.png" alt="" height="50px" width="50px">
         </button>
 
         <br><br>
 
         <button class="image-button" title="GOT TO THE BOTTOM" onclick="scrollToSection('comment')">
-            <img src="static\images\down.png" alt="" height="50px" width="50px">
+            <img src="..\static\images\down.png" alt="" height="50px" width="50px">
         </button>
 
     </div>
@@ -198,7 +197,7 @@
     <div class="main-content">
 
         <section style="margin-top:120px">
-            <img src="static/images/img1.png" width="100%" height="auto">
+            <img src="../static/images/img1.png" width="100%" height="auto">
         </section>
 
         <br><br>
@@ -222,19 +221,19 @@
         <section style="text-align:center">
 
             <div class="image-container">
-                <img src="static\images\purpose.jpg" alt="Purpose Image">
+                <img src="..\static\images\purpose.jpg" alt="Purpose Image">
             </div>
 
             <div class="image-container">
-                <img src="static\images\network.jpg" alt="Network Image">
+                <img src="..\static\images\network.jpg" alt="Network Image">
             </div>
 
             <div class="image-container">
-                <img src="static\images\learning.jpg" alt="Learning Image">
+                <img src="..\static\images\learning.jpg" alt="Learning Image">
             </div>
 
             <div class="image-container">
-                <img src="static\images\mentors.jpg" alt="Mentors Image">
+                <img src="..\static\images\mentors.jpg" alt="Mentors Image">
             </div>
 
         </section>

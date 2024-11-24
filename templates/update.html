@@ -2,15 +2,15 @@
 {% block body %}
     
     <div class="container">
-        <h2>UPDATE TASK</h2>
+        <h2>UPDATE CONTRIBUTIONS</h2>
         <form action="/update/{{ task.sno }}" method="POST">
             <div class="mb-3">
-              <label for="title" class="form-label">Task Title</label>
+              <label for="title" class="form-label">Your name</label>
               <input type="text" class="form-control" name="title" id="title" value="{{task.title}}" aria-describedby="emailHelp" required>
               
             </div>
             <div class="mb-3">
-              <label for="desc" class="form-label">Task Description</label>
+              <label for="desc" class="form-label">Contribution</label>
               <input type="text" class="form-control" name="desc" id="desc" value="{{task.desc}}" required>
             </div>
             
