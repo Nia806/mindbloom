@@ -2,8 +2,10 @@
 <html>
 
 <head>
+
     <title>Mind Bloom</title>
     <link rel="icon" href="images/Logo.png" type="image/x-icon">
+
     <style>
         select.header {
             text-align: right;
@@ -22,7 +24,7 @@
             z-index: 10;
             margin: 0;
             padding: 0;
-}
+        }
 
         .TAB-1,
         .TAB-2,
@@ -32,6 +34,16 @@
             font-family: 'Times New Roman', Times, serif;
             color: #2a2828;
             font-size: 20px;
+        }
+
+        .scroll{
+            position:fixed;
+            top: 350px;
+            left:0;
+        }
+        .image-button{
+            all:unset;
+            cursor:pointer;
         }
 
         .image-container {
@@ -101,56 +113,96 @@
             color: green;
         }
     </style>
+
     <script>
+
         function redirectToPage(selectElement) {
             const selectedValue = selectElement.value;
             if (selectedValue) {
                 window.location.href = selectedValue;
             }
         }
+
+        function scrollToSection(targetClass) {
+            if (targetClass === 'top') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else if (targetClass === 'comment') {
+                const target = document.querySelector(`.${targetClass}`);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        console.error(`No element found with class: ${targetClass}`);
+                }
+            }
+        }
+
     </script>
+
 </head>
 
 <body>
+
     <div class="header">
-        <img style="margin-left: 20px;" src="images/thumbnail.png" alt="mindbloom" height="10%" width="10%">
+        <img style="margin-left: 20px;" src="static\images\thumbnail.png" alt="mindbloom" height="10%" width="10%">
+
         <select class="TAB-1" onchange="redirectToPage(this)">
             <option value="" >OUR WORK</option>
-            <option value="work.html">Our Work</option>
-            <option value="scholarship.html">Scholarship</option>
-            <option value="mentorship.html">Mentorship</option>
-            <option value="session.html">Awareness Sessions</option>
-            <option value="impact.html">Impact and Reach</option>
-            <option value="newsletter.html">Newsletters</option>
+            <option value="templates/work.html">Our Work</option>
+            <option value="templates/scholarship.html">Scholarship</option>
+            <option value="templates/mentorship.html">Mentorship</option>
+            <option value="templates/session.html">Awareness Sessions</option>
+            <option value="templates/impact.html">Impact and Reach</option>
+            <option value="templates/newsletter.html">Newsletters</option>
         </select>
+
         <select class="TAB-2" onchange="redirectToPage(this)">
             <option value="">ABOUT US</option>
             <option value="dashboard.html">About</option>
-            <option value="work.html">Programs</option>
-            <option value="impact.html">Network</option>
+            <option value="http://127.0.0.1:5002">Programs</option>
+            <option value="templates/impact.html">Network</option>
         </select>
+
         <select class="TAB-3" onchange="redirectToPage(this)">
             <option value="">TAKE ACTION</option>
-            <option value="donate.html">Donate</option>
+            <option value="templates/donate.html">Donate</option>
             <option value="volunteer.html">Volunteer</option>
             <option value="scholarship.html">Apply for Scholarship</option>
             <option value="mentorship.html">Apply for Mentorship</option>
         </select>
+
         <select class="TAB-4" onchange="redirectToPage(this)">
             <option value="">LOGIN</option>
-            <option value="student-login.html">Login as Student</option>
-            <option value="mentor-login.html">Login as Mentor</option>
-            <option value="member-login.html">Login as Member</option>
+            <option value="templates/student-login.html">Login as Student</option>
+            <option value="templates/mentor-login.html">Login as Mentor</option>
+            <option value="templates/member-login.html">Login as Member</option>
         </select>
-        <img src="images/notifbell.png" height="2%" width="1.5%">
+
+        <img src="static\images\notifbell.png" height="2%" width="1.5%">
+
     </div>
+
+    <div class="scroll">
+
+        <button class="image-button" title="GOT TO THE TOP" onclick="scrollToSection('top')">
+            <img src="static\images\top.png" alt="" height="50px" width="50px">
+        </button>
+
+        <br><br>
+
+        <button class="image-button" title="GOT TO THE BOTTOM" onclick="scrollToSection('comment')">
+            <img src="static\images\down.png" alt="" height="50px" width="50px">
+        </button>
+
+    </div>
+
     <div class="main-content">
+
         <section style="margin-top:120px">
-            <img src="images/img1.png" width="100%" height="auto">
+            <img src="static/images/img1.png" width="100%" height="auto">
         </section>
+
         <br><br>
-        <section class="gallery"></section>
-        <br><br>
+
         <section style="display: flex; justify-content: space-between; margin-left:30px; margin-right:3px;">
             <iframe width="100%" height="500" src="https://www.youtube.com/embed/fUJq-l2lq6Q?si=bJ2LxSn4MjiHUDxM" 
             title="YouTube video player" style="border: 10px solid #A0A6BE;"
@@ -164,21 +216,29 @@
                 At Mind Bloom, education becomes a transformative journey, where children grow, bloom, and inspire change.
             </p>
         </section>
+
         <br><br>
+
         <section style="text-align:center">
+
             <div class="image-container">
-                <img src="images/purpose.jpg" alt="Purpose Image">
+                <img src="static\images\purpose.jpg" alt="Purpose Image">
             </div>
+
             <div class="image-container">
-                <img src="images/network.jpg" alt="Network Image">
+                <img src="static\images\network.jpg" alt="Network Image">
             </div>
+
             <div class="image-container">
-                <img src="images/learning.jpg" alt="Learning Image">
+                <img src="static\images\learning.jpg" alt="Learning Image">
             </div>
+
             <div class="image-container">
-                <img src="images/mentors.jpg" alt="Mentors Image">
+                <img src="static\images\mentors.jpg" alt="Mentors Image">
             </div>
+
         </section>
+
         <p style="margin-left:50px; margin-right:50px; font-size:20px">
             Mind Bloom is more than just an educational platform—it's a movement aimed at planting the seeds of change and
             nurturing them to full bloom. By harnessing the power of digital learning, we provide children with the
@@ -187,6 +247,7 @@
             creativity, critical thinking, and problem-solving skills, all while fostering a sense of responsibility and
             social awareness.
         </p>
+
         <section class="comment">
             <form action="" method="post">
                 <label for="email">Email:</label><br>
@@ -196,36 +257,47 @@
                 <button type="submit">Send Message</button>
             </form>
         </section>
+
     </div>
+
     <div class="footer">
+
         <table style="margin-left:40px">
+
             <tr>
                 <td><a href=" " class="foot-link"> ABOUT US</a></td>
                 <td><a href=" " class="foot-link"> PROGRAMS </a></td>
                 <td><a href=" " class="foot-link"> PORTAL </a></td>
             </tr>
+
             <tr>
                 <td><a href=" " class="foot-link"> NETWORK </a></td>
                 <td><a href=" " class="foot-link"> SPONSORS </a></td>
                 <td><a href=" " class="foot-link"> CONTACT US </a></td>
             </tr>
+
             <tr>
                 <td><a href=" " class="foot-link"> LOGIN AS STUDENT </a></td>
                 <td><a href=" " class="foot-link"> LOGIN AS MENTOR </a></td>
                 <td><a href=" " class="foot-link"> LOGIN AS VOLUNTEER</a></td>
             </tr>
+
             <tr>
                 <td><a href=" " class="foot-link"> DONATE </a></td>
                 <td><a href=" " class="foot-link"> SPONSORSHIP </a></td>
                 <td><a href=" " class="foot-link"> MENTORSHIP </a></td>
             </tr>
+
             <tr>
                 <td><a href=" " class="foot-link"> TEAM </a></td>
                 <td><a href=" " class="foot-link"> BRANCHES </a></td>
                 <td><a href=" " class="foot-link"> FOLLOWERS </a></td>
             </tr>
+
         </table>
+
     </div>
+
 </body>
 
 </html>

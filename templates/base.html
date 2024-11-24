@@ -14,6 +14,36 @@
 
     <style>
       /* Custom styles */
+
+      select.header {
+        text-align: right;
+        margin-right: 10%;
+        margin-top: 50px;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 10;
+        margin: 0;
+        padding: 0;
+      }
+
+      .TAB-1,
+      .TAB-2,
+      .TAB-3,
+      .TAB-4 {
+        border: none;
+        font-family: 'Times New Roman', Times, serif;
+        color: #2a2828;
+        font-size: 20px;
+      }
+      
       body {
         background-color: #F8F9FA; /* Light background color */
         font-family: 'Times New Roman', Times, serif; /* Change font to Times New Roman */
@@ -53,8 +83,51 @@
         background-color: purple; /* Purple hover for dropdown items */
       }
     </style>
+    <script>
+      function redirectToPage(selectElement) {
+        const selectedValue = selectElement.value;
+        if (selectedValue) {
+          window.location.href = selectedValue;
+        }
+      }
+    </script>
   </head>  
   <body>
+    <div class="header">
+      <img style="margin-left: 20px;" src="{{ url_for('static', filename='images/thumbnail.png') }}" alt="mindbloom" height="10%" width="10%">
+      <select class="TAB-1" onchange="redirectToPage(this)">
+          <option value="" >OUR WORK</option>
+          <option value="{{ url_for('work') }}">Our Work</option>
+          <option value="scholarship.html">Scholarship</option>
+          <option value="mentorship.html">Mentorship</option>
+          <option value="session.html">Awareness Sessions</option>
+          <option value="impact.html">Impact and Reach</option>
+          <option value="newsletter.html">Newsletters</option>
+      </select>
+      <select class="TAB-2" onchange="redirectToPage(this)">
+          <option value="">ABOUT US</option>
+          <option value="dashboard.html">About</option>
+          <option value="work.html">Programs</option>
+          <option value="impact.html">Network</option>
+      </select>
+      <select class="TAB-3" onchange="redirectToPage(this)">
+          <option value="">TAKE ACTION</option>
+          <option value="donate.html">Donate</option>
+          <option value="volunteer.html">Volunteer</option>
+          <option value="scholarship.html">Apply for Scholarship</option>
+          <option value="mentorship.html">Apply for Mentorship</option>
+      </select>
+      <select class="TAB-4" onchange="redirectToPage(this)">
+          <option value="">LOGIN</option>
+          <option value="student-login.html">Login as Student</option>
+          <option value="mentor-login.html">Login as Mentor</option>
+          <option value="member-login.html">Login as Member</option>
+      </select>
+      <img src="{{ url_for('static', filename='images/notifbell.png') }}" height="2%" width="1.5%">
+  </div>
+
+
+  <div style="padding-top:150px">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Task Manager</a>
@@ -88,6 +161,7 @@
           </div>
         </div>
       </nav>
+    </div>
   
     {% block body %}
     

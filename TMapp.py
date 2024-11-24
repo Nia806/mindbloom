@@ -27,6 +27,12 @@ def products():
 
 
 
+@app.route('/work')
+def work():
+    return render_template('work.html')
+
+
+
 @app.route('/update/<int:sno>', methods=['GET', 'POST'])
 def update(sno):
     if request.method=='POST':
@@ -70,4 +76,4 @@ if __name__ == "__main__":
         db.create_all()  # This will create the task.db database if it doesn't exist
     
     # Run the application in debug mode
-    app.run(debug=True)
+    app.run(debug=True, port=5002)
