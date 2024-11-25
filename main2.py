@@ -35,37 +35,44 @@ def home():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        username = request.form['username']
-        password = request.form['password']
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        # Check for empty fields
+        if not username or not password:
+            return render_template("index2.html", error="Username and password are required")
+
         user = User.query.filter_by(username=username).first()
         if user and user.check_password(password):
             session['username'] = username
-            return redirect(url_for('dashboard2'))  # Redirect to dashboard2 if login is successful
+            return redirect(url_for('dashboard2'))
         else:
-            return render_template("index2.html", error="Invalid username or password")  # Return error message if login fails
-    return render_template("index2.html")  # Render the updated index2.html
+            return render_template("index2.html", error="Invalid username or password")
+    return render_template("index2.html")
 
 
 # Register route
 @app.route("/register", methods=["POST"])
 def register():
-    username = request.form['username']
-    password = request.form['password']
-    print(f"Registering user: {username}")  # Debugging line
-    
+    username = request.form.get('username')
+    password = request.form.get('password')
+
+    # Check for empty fields
+    if not username or not password:
+        return render_template("index2.html", error="Username and password are required")
+
     # Check if the username is already taken
     user = User.query.filter_by(username=username).first()
     if user:
-        print(f"Username {username} already taken!")  # Debugging line
-        return render_template("index2.html", error="Username already taken!")  # Show error message if username exists
+        return render_template("index2.html", error="Username already taken!")
     else:
         new_user = User(username=username)
         new_user.set_password(password)
         db.session.add(new_user)
         db.session.commit()
-        print(f"User {username} registered successfully!")  # Debugging line
         session['username'] = username
-        return redirect(url_for('dashboard2'))  # Redirect to dashboard2 after successful registration
+        return redirect(url_for('dashboard2'))
+
 
 
 # Dashboard route
