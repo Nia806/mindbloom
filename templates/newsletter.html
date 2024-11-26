@@ -30,6 +30,16 @@
                 color: #2a2828;
                 font-size: 20px;
             }
+
+            .scroll{
+                position:fixed;
+                top: 350px;
+                left:0;
+            }
+            .image-button{
+                all:unset;
+                cursor:pointer;
+            }
             
             .comment{
                 background-color: #C481A7;
@@ -85,8 +95,21 @@
                 const selectedValue = selectElement.value;
                  if (selectedValue) {
                     window.location.href = selectedValue;
-                 }
-                 }
+                }
+            }
+
+            function scrollToSection(targetClass) {
+                    if (targetClass === 'top') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    } else if (targetClass === 'comment') {
+                        const target = document.querySelector(`.${targetClass}`);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }else {
+                            console.error(`No element found with class: ${targetClass}`);
+                        }
+                    }
+            }
          </script>
     </head>
     <body>
@@ -124,15 +147,36 @@
         </select>
             <img src="../static/images/notifbell.png" height="2%" width="1.5%">
         </div>
-        
-    <div>
-        <section>
+
+        <div class="scroll">
+
+            <button class="image-button" title="GOT TO THE TOP" onclick="scrollToSection('top')">
+                <img src="..\static\images\ub.png" alt="" height="50px" width="50px">
+            </button>
     
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    NEWSLETTER
+            <br><br>
+    
+            <button class="image-button" title="GOT TO THE BOTTOM" onclick="scrollToSection('comment')">
+                <img src="..\static\images\db.png" alt="" height="50px" width="50px">
+            </button>
+    
+        </div>
+        
+    <div class="main-content">
+        <hr>
+
+        <img src="../static/images/newsletter1.png" alt="" width="100%" height="auto" style="padding-top:130px;"><br><br>
+
+        <section style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            
+            <img src="../static/images/newsletter2.png" alt="" width="80%" height="auto">
+            <img src="../static/images/newsletter3.png" alt="" width="80%" height="auto">
+            <img src="../static/images/newsletter4.png" alt="" width="80%" height="auto">
         </section>
+        
+        <br><br>
         <section class="comment">
-            <form action="" method="post">
+            <form >
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email" required><br><br>
                 <label for="message">Any message you want to drop for us:</label><br>
