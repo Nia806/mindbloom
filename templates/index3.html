@@ -3,7 +3,7 @@
 {% block body %}
 
 <div class="container">
-    
+
     <button class="image-button" title="RETURN TO HOME PAGE" onclick="window.location.href='http://127.0.0.1:5002/dashboard';">
         <img src="..\static\images\Return.png" alt="" height="auto" width="50%">
     </button>
@@ -11,25 +11,31 @@
     <br>
     <h1>Welcome Member</h1>
     <br><br>
-    <img src="../static/images/thumbnail.png" alt="mindbloom" height="300px" width=auto>
+    <img src="../static/images/thumbnail.png" alt="mindbloom" height="300px" width="auto">
     <br><br>
     <p style="text-align: left;">Enter your details!</p>
-    <form id="auth-form" action="{{ url_for('register') }}" method="POST">
+
+    <form id="auth-form" action="{{ url_for('login') }}" method="POST">
         <input 
-           type="text" 
-           name="username" 
-           placeholder="Username" 
-           class="input-field"
+            type="text" 
+            name="username" 
+            placeholder="Username" 
+            class="input-field"
         />
         <input 
-           type="password"  
-           name="password" 
-           placeholder="password"
+            type="password"  
+            name="password" 
+            placeholder="Password"
         />
         <br><br>
         <input type="submit" value="Login" class="btn btn-login" onclick="setActionForm('login')"/>
         <input type="button" value="Register" class="btn btn-login" onclick="setActionForm('register')"/>
     </form>
+
+    {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+
 </div>
 
 <script>
