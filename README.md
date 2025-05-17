@@ -18,5 +18,5 @@
 <h4>ACKNOWLEDGMENT </h4>
 <p> </p> <hr>
 <h4>CONTRIBUTING </h4>
-<p>Nihalika Raj Sharma (09201032024)<br>
-Navya Jaint (09X01032024) </p> <hr>
+<p>Nihalika Raj Sharma<br>
+Navya Jaint </p> <hr>
