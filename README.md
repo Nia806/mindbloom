@@ -1,7 +1,5 @@
-<h3 align="center"> WEBSITE FOR <!--WEBSITE NAME--> </h3>
-<h4>ABOUT THE PROJECT </h4>
-<p> </p> <hr>
-<h4>LANGUAGES USED </h4><br>
+<h3 align="center"> MindBloom Website </h3>
+<h4>TECHNOLOGIES USED </h4><br>
 <p>
 <dl>
   <dt>HTML</dt>
@@ -14,9 +12,11 @@
 
 </p> <hr>
 <h4>FEATURES </h4>
-<p> </p> <hr>
-<h4>ACKNOWLEDGMENT </h4>
-<p> </p> <hr>
+<p>login system </p>
+<p>database to handle data </p>
+<p>task manager </p>
+<p>reviews page</p>
+<hr>
 <h4>CONTRIBUTING </h4>
 <p>Nihalika Raj Sharma<br>
 Navya Jaint </p> <hr>
