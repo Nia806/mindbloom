@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Mind Bloom</title>
+    <link rel="icon" href="../static/images/Logo.png" type="image/x-icon">
+
+    <style>
+        select.header {
+            text-align: right;
+            margin-right: 10%;
+            margin-top: 50px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 10;
+            margin: 0;
+            padding: 0;
+        }
+
+        .TAB-1,
+        .TAB-2,
+        .TAB-3,
+        .TAB-4 {
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            color: #2a2828;
+            font-size: 20px;
+        }
+
+        .scroll{
+            position:fixed;
+            top: 350px;
+            left:0;
+        }
+        .image-button{
+            all:unset;
+            cursor:pointer;
+        }
+
+        .image-container {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .comment {
+            background-color: #C481A7;
+        }
+
+        .comment input,
+        .comment textarea,
+        .comment label,
+        .comment button {
+            margin: 10px;
+            margin-left:40px;
+        }
+
+        table {
+            float: right;
+            text-align: center;
+            border-collapse: collapse;
+            white-space: nowrap;
+            table-layout: auto;
+            width: auto;
+        }
+
+        td,
+        th {
+            padding: 8px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 24vh;
+            background-color: #333333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            color: purple;
+        }
+
+        .footer a:active {
+            color: green;
+        }
+    </style>
+
+    <script>
+
+        function redirectToPage(selectElement) {
+            const selectedValue = selectElement.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        }
+
+        function scrollToSection(targetClass) {
+            if (targetClass === 'top') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else if (targetClass === 'comment') {
+                const target = document.querySelector(`.${targetClass}`);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        console.error(`No element found with class: ${targetClass}`);
+                }
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <img style="margin-left: 20px;" src="..\static\images\thumbnail.png" alt="mindbloom" height="10%" width="10%">
+
+        <select class="TAB-1" onchange="redirectToPage(this)">
+            <option value="" >OUR WORK</option>
+            <option value="http://127.0.0.1:5002/work">Our Work</option>
+            <option value="http://127.0.0.1:5002/scholarship">Scholarship</option>
+            <option value="http://127.0.0.1:5002/mentorship">Mentorship</option>
+            <option value="http://127.0.0.1:5002/session">Awareness Sessions</option>
+            <option value="http://127.0.0.1:5002/impact">Impact and Reach</option>
+            <option value="http://127.0.0.1:5002/newsletter">Newsletters</option>
+        </select>
+
+        <select class="TAB-2" onchange="redirectToPage(this)">
+            <option value="">ABOUT US</option>
+            <option value="http://127.0.0.1:5002/dashboard">About</option>
+            <option value="http://127.0.0.1:5002/impact">Network</option>
+        </select>
+
+        <select class="TAB-3" onchange="redirectToPage(this)">
+            <option value="">TAKE ACTION</option>
+            <option value="http://127.0.0.1:5002">Contribute</option>
+            <option value="http://127.0.0.1:5002/volunteer">Volunteer</option>
+            <option value="http://127.0.0.1:5002/scholarship">Apply for Scholarship</option>
+            <option value="http://127.0.0.1:5002/mentorship">Apply for Mentorship</option>
+        </select>
+
+        <select class="TAB-4" onchange="redirectToPage(this)">
+            <option value="">LOGIN</option>
+            <option value="http://127.0.0.1:7000">Login as Student</option>
+            <option value="http://127.0.0.1:7000">Login as Mentor</option>
+            <option value="http://127.0.0.1:5050">Login as Member</option>
+        </select>
+
+        <img src="..\static\images\notifbell.png" height="2%" width="1.5%">
+
+    </div>
+
+    <div class="scroll">
+
+        <button class="image-button" title="GO TOTHE TOP" onclick="scrollToSection('top')">
+            <img src="..\static\images\ub.png" alt="" height="50px" width="50px">
+        </button>
+
+        <br><br>
+
+        <button class="image-button" title="GO TOTHE BOTTOM" onclick="scrollToSection('comment')">
+            <img src="..\static\images\db.png" alt="" height="50px" width="50px">
+        </button>
+
+    </div>
+
+    <div class="main-content">
+
+        <section style="margin-top:120px">
+            <video width="100%" height="auto" autoplay muted loop>
+                <source src="../static/images/d1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+        </section>
+
+        <br><br>
+
+        <section style="display: flex; justify-content: space-between; margin-left:30px; margin-right:3px;">
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/fUJq-l2lq6Q?si=bJ2LxSn4MjiHUDxM" 
+            title="YouTube video player" style="border: 10px solid #A0A6BE;"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            <p style="width: 50%; text-align: justify; font-size:20px; padding:50px;">
+                Mind Bloom is a forward-thinking organization dedicated to promoting Sustainable Development Goal (SDG) education for all. 
+                Through an innovative and accessible online platform, Mind Bloom offers children from all walks of life the opportunity to 
+                explore, learn, and engage with the vital global goals that shape our future. With a focus on creativity, inclusivity, and 
+                sustainability, the platform fosters curiosity and empowers young minds to become active contributors to a better world. 
+                At Mind Bloom, education becomes a transformative journey, where children grow, bloom, and inspire change.
+            </p>
+        </section>
+
+        <br><br>
+
+        <section style="text-align:center">
+
+            <div class="image-container">
+                <img src="..\static\images\purpose.png" alt="Purpose Image">
+            </div>
+
+            <div class="image-container">
+                <img src="..\static\images\network.png" alt="Network Image">
+            </div>
+
+            <div class="image-container">
+                <img src="..\static\images\learning.png" alt="Learning Image">
+            </div>
+
+            <div class="image-container">
+                <img src="..\static\images\mentor.png" alt="Mentors Image">
+            </div>
+
+        </section>
+
+        <p style="margin-left:50px; margin-right:50px; font-size:20px">
+            Mind Bloom is more than just an educational platform—it's a movement aimed at planting the seeds of change and
+            nurturing them to full bloom. By harnessing the power of digital learning, we provide children with the
+            resources and opportunities to engage with the United Nations’ Sustainable Development Goals (SDGs), empowering
+            them to understand and actively contribute to global sustainability efforts. Our platform is designed to inspire
+            creativity, critical thinking, and problem-solving skills, all while fostering a sense of responsibility and
+            social awareness.
+        </p>
+
+        <section class="comment">
+            <form >
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Any message you want to drop for us:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </div>
+
+    <div class="footer">
+
+        <table style="margin-left:40px">
+
+            <tr>
+                <td><a href=" " class="foot-link"> ABOUT US</a></td>
+                <td><a href=" " class="foot-link"> PROGRAMS </a></td>
+                <td><a href=" " class="foot-link"> PORTAL </a></td>
+            </tr>
+
+            <tr>
+                <td><a href=" " class="foot-link"> NETWORK </a></td>
+                <td><a href=" " class="foot-link"> SPONSORS </a></td>
+                <td><a href=" " class="foot-link"> CONTACT US </a></td>
+            </tr>
+
+            <tr>
+                <td><a href=" " class="foot-link"> LOGIN AS STUDENT </a></td>
+                <td><a href=" " class="foot-link"> LOGIN AS MENTOR </a></td>
+                <td><a href=" " class="foot-link"> LOGIN AS VOLUNTEER</a></td>
+            </tr>
+
+            <tr>
+                <td><a href=" " class="foot-link"> DONATE </a></td>
+                <td><a href=" " class="foot-link"> SPONSORSHIP </a></td>
+                <td><a href=" " class="foot-link"> MENTORSHIP </a></td>
+            </tr>
+
+            <tr>
+                <td><a href=" " class="foot-link"> TEAM </a></td>
+                <td><a href=" " class="foot-link"> BRANCHES </a></td>
+                <td><a href=" " class="foot-link"> FOLLOWERS </a></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>
